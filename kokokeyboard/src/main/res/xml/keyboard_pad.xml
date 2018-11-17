@@ -8,103 +8,103 @@
         <Key
             android:codes="113"
             android:keyEdgeFlags="left"
-            android:keyLabel="q" />
+            android:keyLabel="Q" />
         <Key
             android:codes="119"
-            android:keyLabel="w" />
+            android:keyLabel="W" />
         <Key
             android:codes="101"
-            android:keyLabel="e" />
+            android:keyLabel="E" />
         <Key
             android:codes="114"
-            android:keyLabel="r" />
+            android:keyLabel="R" />
         <Key
             android:codes="116"
-            android:keyLabel="t" />
+            android:keyLabel="T" />
         <Key
             android:codes="121"
-            android:keyLabel="y" />
+            android:keyLabel="Y" />
         <Key
             android:codes="117"
-            android:keyLabel="u" />
+            android:keyLabel="U" />
         <Key
             android:codes="105"
-            android:keyLabel="i" />
+            android:keyLabel="I" />
         <Key
             android:codes="111"
-            android:keyLabel="o" />
+            android:keyLabel="O" />
         <Key
             android:codes="112"
-            android:keyLabel="p" />
+            android:keyLabel="P" />
         <Key
             android:codes="-5"
+            android:keyLabel="⌫"
             android:isRepeatable="true"
             android:keyWidth="20%p"
             android:keyEdgeFlags="right"
-            android:keyIcon="@drawable/keyboard_delete_dark" />
+            />
     </Row>
     <Row>
         <Key
             android:codes="97"
             android:keyEdgeFlags="left"
-            android:keyLabel="a" />
+            android:keyLabel="A" />
         <Key
             android:codes="115"
-            android:keyLabel="s" />
+            android:keyLabel="S" />
         <Key
             android:codes="100"
-            android:keyLabel="d" />
+            android:keyLabel="D" />
         <Key
             android:codes="102"
-            android:keyLabel="f" />
+            android:keyLabel="F" />
         <Key
             android:codes="103"
-            android:keyLabel="g" />
+            android:keyLabel="G" />
         <Key
             android:codes="104"
-            android:keyLabel="h" />
+            android:keyLabel="H" />
         <Key
             android:codes="106"
-            android:keyLabel="j" />
+            android:keyLabel="J" />
         <Key
             android:codes="107"
-            android:keyLabel="k" />
+            android:keyLabel="K" />
         <Key
             android:codes="108"
             android:keyEdgeFlags="right"
-            android:keyLabel="l" />
+            android:keyLabel="L" />
     </Row>
     <Row>
         <Key
             android:codes="122"
             android:keyEdgeFlags="left"
-            android:keyLabel="z" />
+            android:keyLabel="Z" />
         <Key
             android:codes="120"
-            android:keyLabel="x" />
+            android:keyLabel="X" />
         <Key
             android:codes="99"
-            android:keyLabel="c" />
+            android:keyLabel="C" />
         <Key
             android:codes="118"
-            android:keyLabel="v" />
+            android:keyLabel="V" />
         <Key
             android:codes="98"
-            android:keyLabel="b" />
+            android:keyLabel="B" />
         <Key
             android:codes="110"
-            android:keyLabel="n" />
+            android:keyLabel="N" />
         <Key
             android:codes="109"
             android:keyEdgeFlags="right"
-            android:keyLabel="m" />
+            android:keyLabel="M" />
     </Row>
     <Row android:rowEdgeFlags="bottom">
         <Key
             android:codes="32"
             android:isRepeatable="true"
             android:keyWidth="60%p"
-            android:keyEdgeFlags="left|right"
-            android:keyLabel="Space" />
+            android:keyLabel="SPACE" />
     </Row>
 </Keyboard>

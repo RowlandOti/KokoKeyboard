@@ -7,5 +7,9 @@
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     android:background="@android:color/transparent"
-    android:keyPreviewLayout="@layout/key_preview_layout" />
+    android:elevation="1dp"
+    android:keyBackground="@drawable/key_background_selector"
+    android:keyPreviewLayout="@layout/key_preview_layout"
+    android:keyTextColor="#384850"
+    android:shadowRadius="0.0" />
 

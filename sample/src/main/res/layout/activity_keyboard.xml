@@ -7,20 +7,17 @@
     android:layout_height="match_parent"
     tools:context="com.rowland.keyboard.KeyboardActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:id="@+id/constraint_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_textinput_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_text"
@@ -28,23 +25,25 @@
                 android:layout_height="wrap_content"
                 android:hint="Type Something"
                 android:inputType="text"
-                android:textColor="@android:color/white" />
+                android:selectAllOnFocus="true"
+                android:textColor="@android:color/black"
+                android:textIsSelectable="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
+        <com.rowland.kokokeyboard.KokoKeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:text="Reset Text"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/email_textinput_layout" />
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:visibility="gone"
+            android:elevation="1dp"
+            android:keyBackground="@drawable/key_background_selector"
+            android:keyPreviewLayout="@layout/key_preview_layout"
+            android:keyTextColor="#384850"
+            android:shadowRadius="0.0" />
+
+    </RelativeLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
