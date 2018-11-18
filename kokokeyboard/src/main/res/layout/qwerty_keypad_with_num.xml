@@ -7,6 +7,95 @@
     android:background="@android:color/transparent">
 
     <com.rowland.kokokeyboard.layouts.KeyBoardRowLayout
+        android:id="@+id/keyboard_row_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.rowland.kokokeyboard.keys.SquareKeyView
+
+            android:id="@+id/key_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1" />
+
+        <com.rowland.kokokeyboard.keys.SquareKeyView
+            android:id="@+id/key_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            
+            android:layout_weight="1"
+            android:text="2" />
+
+        <com.rowland.kokokeyboard.keys.SquareKeyView
+            android:id="@+id/key_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3" />
+
+        <com.rowland.kokokeyboard.keys.SquareKeyView
+            android:id="@+id/key_four"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4" />
+
+        <com.rowland.kokokeyboard.keys.SquareKeyView
+            android:id="@+id/key_five"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5" />
+
+        <com.rowland.kokokeyboard.keys.SquareKeyView
+            android:id="@+id/key_six"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6" />
+
+        <com.rowland.kokokeyboard.keys.SquareKeyView
+            android:id="@+id/key_seven"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="7" />
+
+        <com.rowland.kokokeyboard.keys.SquareKeyView
+            android:id="@+id/key_eight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="8" />
+
+        <com.rowland.kokokeyboard.keys.SquareKeyView
+            android:id="@+id/key_nine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="9" />
+
+        <com.rowland.kokokeyboard.keys.SquareKeyView
+            android:id="@+id/key_zero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </com.rowland.kokokeyboard.layouts.KeyBoardRowLayout>
+
+    <com.rowland.kokokeyboard.layouts.KeyBoardRowLayout
         android:id="@+id/keyboard_qwerty_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

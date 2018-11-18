@@ -8,8 +8,10 @@ import android.widget.Button;
 import com.google.android.material.button.MaterialButton;
 import com.rowland.kokokeyboard.R;
 
+import androidx.appcompat.widget.AppCompatButton;
 
-public class RectangularKeyView extends MaterialButton {
+
+public class RectangularKeyView extends AppCompatButton {
 
     private float screenWidthPercentage = 0.3f;
 

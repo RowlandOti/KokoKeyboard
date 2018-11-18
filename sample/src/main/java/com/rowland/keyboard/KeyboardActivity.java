@@ -26,7 +26,7 @@ public class KeyboardActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (keyboard.isExpanded()) {
-            keyboard.collapse();
+            keyboard.toggle();
         } else {
             super.onBackPressed();
         }

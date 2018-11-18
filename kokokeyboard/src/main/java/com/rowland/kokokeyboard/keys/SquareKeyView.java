@@ -3,12 +3,15 @@ package com.rowland.kokokeyboard.keys;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
+import android.widget.Button;
 
 import com.google.android.material.button.MaterialButton;
 import com.rowland.kokokeyboard.R;
 
+import androidx.appcompat.widget.AppCompatButton;
 
-public class SquareKeyView extends MaterialButton {
+
+public class SquareKeyView extends AppCompatButton {
 
     private float screenWidthPercentage = 0.20f;
     private float widthHeightRatio = 1.0f;
@@ -35,13 +38,8 @@ public class SquareKeyView extends MaterialButton {
     @Override
     public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        /*int width = MeasureSpec.getSize(widthMeasureSpec);
-        int height = MeasureSpec.getSize(heightMeasureSpec);
-        int size = width > height ? height : width;
-        setMeasuredDimension(size, size);*/
 
-
-        int minW = getPaddingLeft() + getPaddingRight() + getSuggestedMinimumWidth();
+        /*int minW = getPaddingLeft() + getPaddingRight() + getSuggestedMinimumWidth();
         int measuredWidth = getDefaultSize(minW, widthMeasureSpec);
 
         int minH = getPaddingBottom() + getPaddingTop() + getSuggestedMinimumHeight();
@@ -50,7 +48,7 @@ public class SquareKeyView extends MaterialButton {
         int finalWidth = measuredWidth;
         int finalHeight = (int) (measuredWidth / widthHeightRatio);
 
-        setMeasuredDimension(finalWidth, finalHeight);
+        setMeasuredDimension(finalWidth, finalHeight);*/
     }
 
 

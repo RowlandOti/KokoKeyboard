@@ -11,7 +11,7 @@
     <style name="Widget.TextAppearance.Button" parent="TextAppearance.MaterialComponents.Button">
         <item name="android:textColor">@android:color/white</item>
         <item name="fontFamily">sans-serif/</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">10sp</item>
     </style>
 
     <style name="Widget.Button.Inverse" parent="Widget.Button">

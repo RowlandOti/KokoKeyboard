@@ -145,7 +145,7 @@ public class KokoKeyboardView extends ExpandableRelativeLayout {
 
         switch (type) {
             case INPUT_TYPE_NUM:
-                view = LayoutInflater.from(getContext()).inflate(R.layout.qwerty_keypad, null);
+                view = LayoutInflater.from(getContext()).inflate(R.layout.qwerty_keypad_with_num, null);
                 keypad.addView(view);
                 return keypad;
             case INPUT_TYPE_QWERTY:
@@ -153,9 +153,15 @@ public class KokoKeyboardView extends ExpandableRelativeLayout {
                 keypad.addView(view);
                 return keypad;
             default:
-                view = LayoutInflater.from(getContext()).inflate(R.layout.qwerty_keypad, null);
+                view = LayoutInflater.from(getContext()).inflate(R.layout.qwerty_keypad_with_num, null);
                 keypad.addView(view);
                 return keypad;
         }
+    }
+
+    @Override
+    protected void onSizeChanged(int width, int height, int oldWidth, int oldHeight) {
+        super.onSizeChanged(width, height, oldWidth, oldHeight);
+
     }
 }

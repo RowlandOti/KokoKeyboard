@@ -30,11 +30,11 @@ public class KeyBoardRowLayout extends LinearLayout {
         setGravity(Gravity.CENTER);
     }
 
-   @Override
+    @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
 
-        for (int i = 0; i < getChildCount(); i++) {
+       /* for (int i = 0; i < getChildCount(); i++) {
             View child = getChildAt(i);
             if (child.getVisibility() == GONE)
                 return;
@@ -51,6 +51,6 @@ public class KeyBoardRowLayout extends LinearLayout {
                 }
                 child.setLayoutParams(childLayoutParams);
             }
-        }
+        }*/
     }
 }
