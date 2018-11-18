@@ -18,9 +18,11 @@ public class KeyboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_keyboard);
 
         EditText qwertyEditText = findViewById(R.id.input_text);
+        EditText qwertyNonNumEditText = findViewById(R.id.input_text_non_num);
 
         keyboard = findViewById(R.id.keyboardview);
         keyboard.registerEditText(KokoKeyboardView.INPUT_TYPE_QWERTY, qwertyEditText);
+        keyboard.registerEditText(KokoKeyboardView.INPUT_TYPE_NUM, qwertyNonNumEditText);
     }
 
     @Override

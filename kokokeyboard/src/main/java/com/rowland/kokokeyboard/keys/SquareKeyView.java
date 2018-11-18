@@ -3,9 +3,7 @@ package com.rowland.kokokeyboard.keys;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.widget.Button;
 
-import com.google.android.material.button.MaterialButton;
 import com.rowland.kokokeyboard.R;
 
 import androidx.appcompat.widget.AppCompatButton;

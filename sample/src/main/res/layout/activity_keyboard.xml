@@ -33,7 +33,7 @@
                     style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Type Something"
+                    android:hint="Type Something wih custom keypad"
                     android:inputType="text"
                     android:textColor="@android:color/black" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -70,7 +70,7 @@
                     android:id="@+id/input_text_stockkeypad"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Type Something with Stock keypad"
+                    android:hint="Type Something with android stock keypad"
                     android:inputType="text"
                     android:textColor="@android:color/black" />
             </com.google.android.material.textfield.TextInputLayout>

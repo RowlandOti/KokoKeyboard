@@ -26,7 +26,5 @@ public class KeyboardWrapperLayout extends LinearLayout {
 
         setLayoutParams(layoutParams);
         setOrientation(LinearLayout.VERTICAL);
-
-
     }
 }

@@ -2,6 +2,7 @@ package com.rowland.kokokeyboard.keypad;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -86,9 +87,14 @@ public class KokoKeyboardView extends ExpandableRelativeLayout {
             return;
         }
         field.setRawInputType(InputType.TYPE_CLASS_TEXT);
-        field.setShowSoftInputOnFocus(false);
         field.setSoundEffectsEnabled(false);
         field.setLongClickable(false);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            field.setShowSoftInputOnFocus(false);
+        } else {
+            field.setTextIsSelectable(true);
+        }
 
         InputConnection inputConnection = field.onCreateInputConnection(new EditorInfo());
         KeyboardLayout keyboard = generateCorrectKeyboard(type, inputConnection);
