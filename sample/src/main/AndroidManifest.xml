@@ -11,7 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.rowland.keyboard.KeyboardActivity">
+        <activity
+            android:name="com.rowland.keyboard.KeyboardActivity"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,17 +23,17 @@
         </activity>
 
 
-        <service
+        <!--<service
             android:name="com.rowland.kokokeyboard.KeyInputMethodService"
             android:label="Koko Keyboard Example"
             android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
-                <action android:name="android.view.InputMethod"/>
+                <action android:name="android.view.InputMethod" />
             </intent-filter>
             <meta-data
                 android:name="android.view.im"
-                android:resource="@xml/input_method"/>
-        </service>
+                android:resource="@xml/input_method" />
+        </service>-->
     </application>
 
 </manifest>

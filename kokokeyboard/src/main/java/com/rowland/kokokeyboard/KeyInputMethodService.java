@@ -72,7 +72,7 @@ public class KeyInputMethodService extends InputMethodService implements Keyboar
 
     @Override
     public View onCreateInputView() {
-        mKeyboardInputView = (KeyboardView) getLayoutInflater().inflate(R.layout.keyboard_layout, null);
+        mKeyboardInputView = (KeyboardView) getLayoutInflater().inflate(R.layout.qwerty_keypad, null);
         mKeyboardInputView.setOnKeyboardActionListener(this);
         mKeyboardInputView.setKeyboard(mActiveKeyboard);
         mKeyboardInputView.setPreviewEnabled(false);

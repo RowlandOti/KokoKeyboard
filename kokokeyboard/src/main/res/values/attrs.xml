@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<declare-styleable name="KeyPadView">
+    <!-- Reference to a style for the Keypad View -->
+    <attr name="screen_width_percent" format="float" />
+    <attr name="width_height_ratio" format="float" />
+</declare-styleable>
+</resources>

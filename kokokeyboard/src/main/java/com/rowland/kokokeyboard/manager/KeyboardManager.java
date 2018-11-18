@@ -1,7 +1,8 @@
-package com.rowland.kokokeyboard;
+package com.rowland.kokokeyboard.manager;
 
 import android.view.inputmethod.InputConnection;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class KeyboardManager {
@@ -14,7 +15,7 @@ public class KeyboardManager {
     private int cursorPosition = 0;
     private String inputText = "";
 
-    private List<KeyboardListener> listeners;
+    private List<KeyboardListener> listeners = new ArrayList<>();
     private InputConnection inputConnection;
 
     public interface KeyboardListener {
