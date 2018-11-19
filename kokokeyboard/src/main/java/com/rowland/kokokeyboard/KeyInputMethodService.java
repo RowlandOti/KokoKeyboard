@@ -8,6 +8,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 
+//ToDo: allow  integration of custom keyboard as a systme wide keyboard
 public class KeyInputMethodService extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
 
     private Keyboard mKeyboard;

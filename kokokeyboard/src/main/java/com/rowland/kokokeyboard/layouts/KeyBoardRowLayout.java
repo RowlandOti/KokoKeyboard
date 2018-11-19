@@ -3,11 +3,7 @@ package com.rowland.kokokeyboard.layouts;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.Gravity;
-import android.view.View;
 import android.widget.LinearLayout;
-
-import com.rowland.kokokeyboard.keys.RectangularKeyView;
-import com.rowland.kokokeyboard.keys.SquareKeyView;
 
 import androidx.annotation.Nullable;
 
@@ -52,5 +48,7 @@ public class KeyBoardRowLayout extends LinearLayout {
                 child.setLayoutParams(childLayoutParams);
             }
         }*/
+
+
     }
 }

@@ -164,10 +164,4 @@ public class KokoKeyboardView extends ExpandableRelativeLayout {
                 return keypad;
         }
     }
-
-    @Override
-    protected void onSizeChanged(int width, int height, int oldWidth, int oldHeight) {
-        super.onSizeChanged(width, height, oldWidth, oldHeight);
-
-    }
 }

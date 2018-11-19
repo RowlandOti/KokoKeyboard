@@ -28,7 +28,7 @@
             android:id="@+id/key_two"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            
+
             android:layout_weight="1"
             android:text="2" />
 
@@ -177,7 +177,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
             android:text="⌫"
-            app:screen_width_percent="0.3" />
+            app:is_special_key="true"
+            app:screen_width_percent="0.3"
+            app:special_key_code="backspace" />
 
     </com.rowland.kokokeyboard.layouts.KeyBoardRowLayout>
 
@@ -345,7 +347,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="7"
             android:text="SPACE"
-            app:screen_width_percent="0.60" />
+            app:is_special_key="true"
+            app:screen_width_percent="0.60"
+            app:special_key_code="space" />
 
         <Space
             android:layout_width="0dp"
