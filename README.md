@@ -128,7 +128,7 @@ public class KeyboardActivity extends AppCompatActivity {
 
         keyboard = findViewById(R.id.keyboardview);
         keyboard.registerEditText(KokoKeyboardView.INPUT_TYPE_QWERTY, qwertyEditText);
-        keyboard.registerEditText(KokoKeyboardView.INPUT_TYPE_NUM, qwertyNonNumEditText);
+        keyboard.registerEditText(KokoKeyboardView.INPUT_TYPE_QWERTY_NUM , qwertyNonNumEditText);
     }
 
     @Override
@@ -144,7 +144,7 @@ public class KeyboardActivity extends AppCompatActivity {
 
 
 
-Calling `keyboard.registerEditText()` enables the specific `EditText` to use the custom keyboard. The first argument determines the type of keypad that will be used. Currently the options supported are `KokoKeyboardView.INPUT_TYPE_QWERTY` and `KokoKeyboardView.INPUT_TYPE_NUM`.
+Calling `keyboard.registerEditText()` enables the specific `EditText` to use the custom keyboard. The first argument determines the type of keypad that will be used. Currently the options supported are `KokoKeyboardView.INPUT_TYPE_QWERTY` and `KokoKeyboardView.INPUT_TYPE_QWERTY_NUM `.
 We have various key types like `SquareKeyView` for normal `char` entry and `RectangularKeyView` to handle special actions.
 
 ### Coming Soon
