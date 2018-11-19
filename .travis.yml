@@ -47,7 +47,7 @@ deploy:
   # only deploy if
   on:
     # we are on this repo
-    repo: RowlandOti/E-CommerceApp-Merchant
+    repo: RowlandOti/KokoKeyboard
     # and we are building a tag
     tags: true
 before_install:
