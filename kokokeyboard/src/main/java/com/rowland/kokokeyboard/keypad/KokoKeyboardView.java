@@ -22,7 +22,7 @@ import java.util.HashMap;
 
 public class KokoKeyboardView extends ExpandableRelativeLayout {
 
-    public static final int INPUT_TYPE_NUM = -10;
+    public static final int INPUT_TYPE_QWERTY_NUM = -10;
     public static final int INPUT_TYPE_QWERTY = -20;
 
     private EditText activeEditField;
@@ -150,7 +150,7 @@ public class KokoKeyboardView extends ExpandableRelativeLayout {
         View view;
 
         switch (type) {
-            case INPUT_TYPE_NUM:
+            case INPUT_TYPE_QWERTY_NUM:
                 view = LayoutInflater.from(getContext()).inflate(R.layout.qwerty_keypad_with_num, null);
                 keypad.addView(view);
                 return keypad;

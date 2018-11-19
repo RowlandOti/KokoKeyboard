@@ -150,7 +150,7 @@ We have various key types like `SquareKeyView` for normal `char` entry and `Rect
 ### Coming Soon
 
 - Availability as system-wide Android Keyboard. This will be achieved using `KeyInputMethodService` implementaion of `InputMethodService`.
-- Support for more special `char` and special actions like delet select, forward delete, mode change e.t.c
+- Support for more special `char` and special actions like delete select, forward delete, mode change e.t.c
 - Support for customized look i.e themes.
 
 ### Developers
