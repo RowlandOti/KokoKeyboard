@@ -147,6 +147,11 @@ public class KeyboardActivity extends AppCompatActivity {
 Calling `keyboard.registerEditText()` enables the specific `EditText` to use the custom keyboard. The first argument determines the type of keypad that will be used. Currently the options supported are `KokoKeyboardView.INPUT_TYPE_QWERTY` and `KokoKeyboardView.INPUT_TYPE_NUM`.
 We have various key types like `SquareKeyView` for normal `char` entry and `RectangularKeyView` to handle special actions.
 
+### Coming Soon
+
+- Availability as system-wide Android Keyboard. This will be achieved using `KeyInputMethodService` implementaion of `InputMethodService`.
+- Support for more special `char` and special actions like delet select, forward delete, mode change e.t.c
+- Support for customized look i.e themes.
 
 ### Developers
 <table>
