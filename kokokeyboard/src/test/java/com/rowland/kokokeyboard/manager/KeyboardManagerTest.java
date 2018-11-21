@@ -22,22 +22,19 @@ public class KeyboardManagerTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         keyboardManager = Mockito.spy(new KeyboardManager(inputConnection));
+
+        Mockito.doReturn("QWERT").when(inputConnection).getTextBeforeCursor(100, 0);
+        Mockito.doReturn("ABCD").when(inputConnection).getTextAfterCursor(100, 0);
     }
 
     @Test
     public void handleKeyStrokeChar() {
-        Mockito.doReturn("QWERT").when(inputConnection).getTextBeforeCursor(100, 0);
-        Mockito.doReturn("ABCD").when(inputConnection).getTextAfterCursor(100, 0);
-
         keyboardManager.onKeyStroke('C');
         Mockito.verify(keyboardManager, Mockito.times(1)).handleKeyStroke('C');
     }
 
     @Test
     public void handleKeyStrokeSpecialKey() {
-        Mockito.doReturn("QWERT").when(inputConnection).getTextBeforeCursor(100, 0);
-        Mockito.doReturn("ABCD").when(inputConnection).getTextAfterCursor(100, 0);
-
         keyboardManager.onKeyStroke('C');
         keyboardManager.onKeyStroke(KeyboardManager.KEYCODE_BACKSPACE, false);
         Mockito.verify(keyboardManager, Mockito.times(1)).handleKeyStroke(KeyboardManager.KEYCODE_BACKSPACE, false);
@@ -48,12 +45,21 @@ public class KeyboardManagerTest {
 
     @Test
     public void clearAll() {
-        keyboardManager.handleKeyStroke('C');
-        keyboardManager.handleKeyStroke(KeyboardManager.KEYCODE_BACKSPACE, true);
+        keyboardManager.onKeyStroke('C');
+        keyboardManager.onKeyStroke(KeyboardManager.KEYCODE_BACKSPACE, true);
         Mockito.verify(keyboardManager, Mockito.times(1)).clearAll();
     }
 
     @Test
     public void registerListener() {
+        KeyboardManager.KeyboardListener keyboardListener = Mockito.mock(KeyboardManager.KeyboardListener.class);
+        keyboardManager.registerListener(keyboardListener);
+
+        keyboardManager.onKeyStroke('C');
+        Mockito.verify(keyboardListener, Mockito.times(1)).characterClicked('C');
+
+        keyboardManager.onKeyStroke(KeyboardManager.KEYCODE_BACKSPACE, true);
+        Mockito.verify(keyboardListener, Mockito.times(1)).specialKeyClicked(KeyboardManager.KEYCODE_BACKSPACE);
+
     }
 }
