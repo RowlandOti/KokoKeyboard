@@ -39,7 +39,7 @@ public class KeyboardKeysBehaviourTest {
     public void testSpaceAndBackSpaceKeys() {
         // Type text and then press the button.
         onView(withId(R.id.input_text)).perform(typeText(mStringToBetyped), closeSoftKeyboard());
-        onView(withId(R.id.input_text)).check(matches(not(withText(mStringToBetyped))));
+        onView(withId(R.id.input_text)).check(matches(withText(mStringToBetyped)));
 
         onView(withId(R.id.key_backspace)).perform(click());
         // Check that the text was changed.
