@@ -2,61 +2,55 @@ language: android
 notifications:
   email:
     recipients:
-      - rowlandotienoo@gmail.com
+    - rowlandotienoo@gmail.com
     on_success: always
     on_failure: always
 env:
   global:
-    - secure: a0ntodqya0a8584T2gTX06eLFGwxo/cBQ2lMowzHB5ELa9VwcvBrIROUDrLWwJu9HPk3EDHQDKnGPTkP9Cb7p3QjHY3oL0zvEJCfjGTszUQVEQBuVfK3uxKMeQhWzWexoOcCaHpbcBvQYRUBNwDBy+IrW6FOT6lFqS+7/eZiT9RvO59nxJxZ3q/HypIiYfQnoYl6dGEZeMpBrxJHQg2U+ZBSRf/yFFSrHQXRi5y/wK8zjrWpDjXVOYtzPv0DOdhCRVVx5M8LIWhq6LsZkWvdpAVJ4gCPEMM98rLQex32N+ZGp9gN9rymWJkdjuzKm3I72DOj059ALzSUuM5ySC4eYe/cHyTexfuQNb5JOMmCOZqccql6Id0s1xODC0sSL9IKxfXcQBNqvAA3/UUEu3bH+VB76m18Gkfv2XPfcHXMTiv6XyCiRPR3WdTvYAeCUkn4/YPKBXTovHr/xCqHIlRpor0CYj0f6ETa7fmf3UyK3KAj8ogK9G0vDgFJAWkFQ5OyDue+Yk2Prfv2U+pfkVFk+7hWWuVnHYBqDEwqdIGBpKUWxLLQOZuez3hUBLa/sDqZLBFWFyV/s026OfE+OXB+e/pNIxOKAwGuVCY9CuFSnGFnwZTi9pxFnI+mr4k91kc9fh9WHUGUqSEl5sXxDZ5iNozoIZbCSWdQDcRXC/qLLmU=
-    - secure: T4Grbm3hASYRIUogx2eo+aNbMA3cK2eL0qhNpQKLlVwtm2C4kOVsr5J6FAWKgtLIRIaTGfL6cJqWDrnxv/MuLbuYGCXSmHBualN1xkktKVlzM23EkucChJeJ1AKLULyYSCTZet8rg9aHo5qvoDa4dw5hnZsyBijljqIzncO18tNL/+QucIjfQbR7GKUjb8J5LyR/nAj2afp0xshjsem6LnMgwUej/YhrAATi71pCbUXVflk6C65hcQmLR/TNZ9ZxTvJkTtQyVp2+3EWkoUFo/rD/uljLzy9NKKijeHqjjIwHzoi74NBoL02p5r5LoDdBsujF965HivB/p1kHT10eaxA6OoPw/TzxvwimD5tfmCvqKNiKX0zb965Z57G2XsgR4jv9duecCnOaa8NfIYt8f0pzGfTd652t2bnoeGktuW4DbNW/CBTIuJiRGqgHmjIF9ga5pNWXaFdqefeZa3yAw/KTz7/DgFSCaDTUPMXzSss1SbwMf8Nf8t+ddxpTrjT38C5h4zCgLa350a73Wc5o7qC4hxs+3EDs2b00NC6yORaayjS7DcBROLXK4IAqr/bgEkV5XAjea7RsKzg80ZkO1eYoK+fM+A4yNFZnRSy0uZIcYcwQWebIwLmqRKHa3Za4aFUzIswCDpKerl5pSs9CfkUHBRZ8PtsYzXRyMMgMbqk=
-
+  - secure: a0ntodqya0a8584T2gTX06eLFGwxo/cBQ2lMowzHB5ELa9VwcvBrIROUDrLWwJu9HPk3EDHQDKnGPTkP9Cb7p3QjHY3oL0zvEJCfjGTszUQVEQBuVfK3uxKMeQhWzWexoOcCaHpbcBvQYRUBNwDBy+IrW6FOT6lFqS+7/eZiT9RvO59nxJxZ3q/HypIiYfQnoYl6dGEZeMpBrxJHQg2U+ZBSRf/yFFSrHQXRi5y/wK8zjrWpDjXVOYtzPv0DOdhCRVVx5M8LIWhq6LsZkWvdpAVJ4gCPEMM98rLQex32N+ZGp9gN9rymWJkdjuzKm3I72DOj059ALzSUuM5ySC4eYe/cHyTexfuQNb5JOMmCOZqccql6Id0s1xODC0sSL9IKxfXcQBNqvAA3/UUEu3bH+VB76m18Gkfv2XPfcHXMTiv6XyCiRPR3WdTvYAeCUkn4/YPKBXTovHr/xCqHIlRpor0CYj0f6ETa7fmf3UyK3KAj8ogK9G0vDgFJAWkFQ5OyDue+Yk2Prfv2U+pfkVFk+7hWWuVnHYBqDEwqdIGBpKUWxLLQOZuez3hUBLa/sDqZLBFWFyV/s026OfE+OXB+e/pNIxOKAwGuVCY9CuFSnGFnwZTi9pxFnI+mr4k91kc9fh9WHUGUqSEl5sXxDZ5iNozoIZbCSWdQDcRXC/qLLmU=
+  - secure: T4Grbm3hASYRIUogx2eo+aNbMA3cK2eL0qhNpQKLlVwtm2C4kOVsr5J6FAWKgtLIRIaTGfL6cJqWDrnxv/MuLbuYGCXSmHBualN1xkktKVlzM23EkucChJeJ1AKLULyYSCTZet8rg9aHo5qvoDa4dw5hnZsyBijljqIzncO18tNL/+QucIjfQbR7GKUjb8J5LyR/nAj2afp0xshjsem6LnMgwUej/YhrAATi71pCbUXVflk6C65hcQmLR/TNZ9ZxTvJkTtQyVp2+3EWkoUFo/rD/uljLzy9NKKijeHqjjIwHzoi74NBoL02p5r5LoDdBsujF965HivB/p1kHT10eaxA6OoPw/TzxvwimD5tfmCvqKNiKX0zb965Z57G2XsgR4jv9duecCnOaa8NfIYt8f0pzGfTd652t2bnoeGktuW4DbNW/CBTIuJiRGqgHmjIF9ga5pNWXaFdqefeZa3yAw/KTz7/DgFSCaDTUPMXzSss1SbwMf8Nf8t+ddxpTrjT38C5h4zCgLa350a73Wc5o7qC4hxs+3EDs2b00NC6yORaayjS7DcBROLXK4IAqr/bgEkV5XAjea7RsKzg80ZkO1eYoK+fM+A4yNFZnRSy0uZIcYcwQWebIwLmqRKHa3Za4aFUzIswCDpKerl5pSs9CfkUHBRZ8PtsYzXRyMMgMbqk=
 jdk:
 - oraclejdk8
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-    - $HOME/.android/build-cache
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+  - "$HOME/.android/build-cache"
 android:
   components:
-    - tools
-    - platform-tools
-    - tools
-    - extra-android-support
-    - extra-google-google_play_services
-    - extra-android-m2repository
-    - extra-google-m2repository
-    - build-tools-28.0.2
-    - android-28
+  - tools
+  - platform-tools
+  - tools
+  - extra-android-support
+  - extra-google-google_play_services
+  - extra-android-m2repository
+  - extra-google-m2repository
+  - build-tools-28.0.2
+  - android-28
   licenses:
-    - 'android-sdk-preview-license-52d11cd2'
-    - 'android-sdk-license-.+'
-    - 'google-gdk-license-.+'
+  - android-sdk-preview-license-52d11cd2
+  - android-sdk-license-.+
+  - google-gdk-license-.+
 deploy:
   provider: releases
-  # The api-key is encrypted like described here: http://docs.travis-ci.com/user/encryption-keys/  (only travis can decrypt the key)
   api_key:
-    secure: C1OQySRBbWtNAAVrjoAnuRK0bVIAv9ujmCWNKfVNQ6bLHYk6OG5xDO0qOTfE1aTpTtk/vangRqgxN8LErW4ndLR2jURZeUB711jbUDTB18v8m4RJR04xppsU7eglSd8t1hFv2i+2JcQi1h9dqwWNSVMnIvw6xnYZzrx0biPOXp5eQufbUAur0n9toz3x44ubTg8w6hHdWBPO+Rnm1RqoPQ1AmB+WDLAjTd0U/tChqSZfOqp6BxlyuTzO2Q9UcYoe7FuMMskV8mBU5jkTMZEQGe7GQ1DIFUbHTJn9qpSATlfToDUFiJXbFLuHMnUNPV8ap9dc+rhaJbXSI8d2oAltGIWV3nO7GR0zhmT8A7G+zqQ5OkqRKfzxVrQvMgemiB8YtWkgpDN6iwp4qsYEqdwgRtuTR8ZSNnsuRf+3PBTfOQNIT+VL/U0FI4P+glpzuP+sjS6FogoprOdXMbYar7QIo2SLxLTo8hVd+B0CnmXenN/ea+2je6o+MPmyySHQE4qGyH7MdvaUgKJ5moDiYjuZqetiLVvkcZapbH6Iq6yKZ41SAk+8dxDRTcGcmV+eS98qFOTSgDx4Uin59jDdaHYgNKr24RYIusgNJauX9aqv+BT972dVdzMqiLmDLPZuvf6n6Z51U3P2Z2MD1yOmy92g22CHZvENHDINhtvuPF/lr08=
-  # Which file(s) to upload
+    secure: Mn0u4AYfIF7Hhpk3xpNYnrYTc9cHAnMOKUMnzDHvbAR3cO01/jLw1euxY5xv2X3zA7yDxStZL34xdpC5DHfmHKtyiv6ig4f6NazmICon0OgyRdZZVPNaxVeU033M2/xf8p1FT0jHUeiE2v3AljeJI28kFnBnBa50LnF6nU6bHmIR4N17IgcZjMJr2j23T3XBdTGKfn7sro7Fob/t2Pb3kmYOcPg4McoxAQFX0SIVEmB/eaR/Da6GHe+28dzDnJZ8/EzmZbqZlRATIlfAdfeNU1AAAfM1rX2oFYDRkoh3KkoE9XvyIpajJhvAOQlkLq7LrCuetRuPZH0BfzEyh5h6R+2HJtCk2q77lcKnJr5jVKjz1AJ28/6JqJcCywlzq+MzG8dlegIFWm1OgO3V3GWrSq+mLBYMcTCS1C2SZt+yALbNRPWTY0Q8BZemSVZA89jNW4wKKh1RrtMk8yFVIW/mLTyiSevy8Q8PzVREhL5eIXGpM/1ZaKmYaul+OgWdnaE8HiQVvJKTy/DomSj4NxB8yJUR/H1SNX4XxwDRxiVzKbpta0EHLdwE8c3oLPvqpsTKl6/PMkOoe7+oGPqYbcqpGo21NqE3VHXIFub9oNMeuNuX49Hj1dUnIArVPLfgW9bSh9+XvWoVfd7e9+p+GXGu4S7zCvRqYuAUt6sX+b+7Zvg=
   file: sample/build/outputs/apk/debug/app-debug.apk
-  # do not delete the files we're trying to upload
-  skip_cleanup: true
-  # only deploy if
   on:
-    # we are on this repo
     repo: RowlandOti/KokoKeyboard
-    # and we are building a tag
-    tags: true
 before_install:
-  # Install SDK license so Android Gradle plugin can install deps.
-  - mkdir "$ANDROID_HOME/licenses" || true
-  - echo "d56f5187479451eabf01fb78af6dfcb131a6481e" > "$ANDROID_HOME/licenses/android-sdk-license"
-  - export JAVA7_HOME=/usr/lib/jvm/java-7-oracle
-  - export JAVA8_HOME=/usr/lib/jvm/java-8-oracle
-  - export JAVA_HOME=$JAVA8_HOME
-  - chmod +x gradlew
+- mkdir "$ANDROID_HOME/licenses" || true
+- echo "d56f5187479451eabf01fb78af6dfcb131a6481e" > "$ANDROID_HOME/licenses/android-sdk-license"
+- export JAVA7_HOME=/usr/lib/jvm/java-7-oracle
+- export JAVA8_HOME=/usr/lib/jvm/java-8-oracle
+- export JAVA_HOME=$JAVA8_HOME
+- chmod +x gradlew
 script:
 - "./gradlew clean build --stacktrace"
+script:
+- "./gradlew clean build --stacktrace"
+after_deploy:
+- "./gradlew bintrayUpload -PbintrayUser=$BINTRAYUSER -PbintrayKey=$BINTRAYKEY -PdryRun=false --stacktrace"
