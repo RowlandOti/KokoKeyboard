@@ -60,6 +60,5 @@ public class KeyboardManagerTest {
 
         keyboardManager.onKeyStroke(KeyboardManager.KEYCODE_BACKSPACE, true);
         Mockito.verify(keyboardListener, Mockito.times(1)).specialKeyClicked(KeyboardManager.KEYCODE_BACKSPACE);
-
     }
 }

@@ -29,8 +29,9 @@ public class KeyboardKeysBehaviourTest {
     public ActivityTestRule<KeyboardActivity> mActivityRule = new ActivityTestRule<>(KeyboardActivity.class);
     private String mStringToBetyped;
 
+
     @Before
-    public void initValidString() {
+    public void setUp() {
         mStringToBetyped = "QWERTY";
     }
 
