@@ -37,10 +37,17 @@ android:
 deploy:
   provider: releases
   api_key:
+    # The api-key is encrypted like described here: http://docs.travis-ci.com/user/encryption-keys/  (only travis can decrypt the key)
     secure: Mn0u4AYfIF7Hhpk3xpNYnrYTc9cHAnMOKUMnzDHvbAR3cO01/jLw1euxY5xv2X3zA7yDxStZL34xdpC5DHfmHKtyiv6ig4f6NazmICon0OgyRdZZVPNaxVeU033M2/xf8p1FT0jHUeiE2v3AljeJI28kFnBnBa50LnF6nU6bHmIR4N17IgcZjMJr2j23T3XBdTGKfn7sro7Fob/t2Pb3kmYOcPg4McoxAQFX0SIVEmB/eaR/Da6GHe+28dzDnJZ8/EzmZbqZlRATIlfAdfeNU1AAAfM1rX2oFYDRkoh3KkoE9XvyIpajJhvAOQlkLq7LrCuetRuPZH0BfzEyh5h6R+2HJtCk2q77lcKnJr5jVKjz1AJ28/6JqJcCywlzq+MzG8dlegIFWm1OgO3V3GWrSq+mLBYMcTCS1C2SZt+yALbNRPWTY0Q8BZemSVZA89jNW4wKKh1RrtMk8yFVIW/mLTyiSevy8Q8PzVREhL5eIXGpM/1ZaKmYaul+OgWdnaE8HiQVvJKTy/DomSj4NxB8yJUR/H1SNX4XxwDRxiVzKbpta0EHLdwE8c3oLPvqpsTKl6/PMkOoe7+oGPqYbcqpGo21NqE3VHXIFub9oNMeuNuX49Hj1dUnIArVPLfgW9bSh9+XvWoVfd7e9+p+GXGu4S7zCvRqYuAUt6sX+b+7Zvg=
+  # Which file(s) to upload
   file: sample/build/outputs/apk/debug/app-debug.apk
+  # do not delete the files we're trying to upload
+  skip_cleanup: true
+  # only deploy if
   on:
     repo: RowlandOti/KokoKeyboard
+    # and we are building a tag
+    tags: true
 before_install:
 - mkdir "$ANDROID_HOME/licenses" || true
 - echo "d56f5187479451eabf01fb78af6dfcb131a6481e" > "$ANDROID_HOME/licenses/android-sdk-license"
