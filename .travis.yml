@@ -38,11 +38,9 @@ deploy:
   provider: releases
   api_key:
     # The api-key is encrypted like described here: http://docs.travis-ci.com/user/encryption-keys/  (only travis can decrypt the key)
-    secure: Mn0u4AYfIF7Hhpk3xpNYnrYTc9cHAnMOKUMnzDHvbAR3cO01/jLw1euxY5xv2X3zA7yDxStZL34xdpC5DHfmHKtyiv6ig4f6NazmICon0OgyRdZZVPNaxVeU033M2/xf8p1FT0jHUeiE2v3AljeJI28kFnBnBa50LnF6nU6bHmIR4N17IgcZjMJr2j23T3XBdTGKfn7sro7Fob/t2Pb3kmYOcPg4McoxAQFX0SIVEmB/eaR/Da6GHe+28dzDnJZ8/EzmZbqZlRATIlfAdfeNU1AAAfM1rX2oFYDRkoh3KkoE9XvyIpajJhvAOQlkLq7LrCuetRuPZH0BfzEyh5h6R+2HJtCk2q77lcKnJr5jVKjz1AJ28/6JqJcCywlzq+MzG8dlegIFWm1OgO3V3GWrSq+mLBYMcTCS1C2SZt+yALbNRPWTY0Q8BZemSVZA89jNW4wKKh1RrtMk8yFVIW/mLTyiSevy8Q8PzVREhL5eIXGpM/1ZaKmYaul+OgWdnaE8HiQVvJKTy/DomSj4NxB8yJUR/H1SNX4XxwDRxiVzKbpta0EHLdwE8c3oLPvqpsTKl6/PMkOoe7+oGPqYbcqpGo21NqE3VHXIFub9oNMeuNuX49Hj1dUnIArVPLfgW9bSh9+XvWoVfd7e9+p+GXGu4S7zCvRqYuAUt6sX+b+7Zvg=
+    secure: WNkAmzW6tgbhH9OedLAtJPdS8dKA66/AabqXs+ImbQUMEZ+G5e3sDwvQIhl5Z36JIZvPOQxvVnrp8RL3Uc+enVbB0ZvRLZIbufzC18VxrYTcJeDPC0hYqRwHZs5XbqPU2a3Ro9NhmpGJcUQPg+KuTZVV9xvTCpYugU5Y27JbgfLtGk6KKNyyrAoumVuFvKvEw39xNY4V3AyKIslMkG3iyAoJTDFPOM2mhfvsc7wB0e4IPz+gWt12R1Szi3V4LQROzrlBfcL3b3p+/e045sArT0CygRNdLWsoGO4qH8IMxBSITKTSPXqraXbGs4P44ifXExJW3uvZEyq8GlMShWW69cFPh/UiKfBDRmb2D9+4YQm9hElN9RzUGgMa85qqSZenxya31IEBhre+fDev/A7AOssv5RgeEC9YZRD0aJ+nNtVoUQP8OMGML86O6i8oKq14xFAMnMsl4Dua9TOcSL0HvPn/C7cJYjU0BTmfb96cfBHE7z8ri8A4XOov7/tLD+M9V/tG+IA5AImUGxQoFvsXrAFA6lbcDo9ivTKonR3HmBN84XJ9pz6b7i4n+fTju43rlEvTHPux809T6W3N+H+GGRApSwe9nPSZPD5PpjMOQgcom2cEPke5wyrH1V25cGCk4r+EDYXz6likW/56ujjNsfNOo0G44Ku3DlBl6AF/LVQ=
   # Which file(s) to upload
   file: sample/build/outputs/apk/debug/app-debug.apk
-  # do not delete the files we're trying to upload
-  skip_cleanup: true
   # only deploy if
   on:
     repo: RowlandOti/KokoKeyboard
@@ -57,7 +55,6 @@ before_install:
 - chmod +x gradlew
 script:
 - "./gradlew clean build --stacktrace"
-script:
-- "./gradlew clean build --stacktrace"
 after_deploy:
-- "./gradlew bintrayUpload -PbintrayUser=$BINTRAYUSER -PbintrayKey=$BINTRAYKEY -PdryRun=false --stacktrace"
+- "./gradlew bintrayUpload -PbintrayUser=$BINTRAYUSER -PbintrayKey=$BINTRAYKEY -PdryRun=false
+  --stacktrace"
