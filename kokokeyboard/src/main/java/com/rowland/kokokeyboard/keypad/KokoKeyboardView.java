@@ -102,41 +102,35 @@ public class KokoKeyboardView extends ExpandableRelativeLayout {
         keyboards.put(field, keyboard);
         keyboards.get(field).registerListener(keyboardListener);
 
-        field.setOnFocusChangeListener(new OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus) {
-                    InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(field.getWindowToken(), 0);
+        field.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(field.getWindowToken(), 0);
 
-                    activeEditField = field;
-                    removeAllViews();
+                activeEditField = field;
+                removeAllViews();
 
-                    KeyboardLayout keyboard = keyboards.get(activeEditField);
-                    addView(keyboard);
+                KeyboardLayout keyboard1 = keyboards.get(activeEditField);
+                addView(keyboard1);
 
-                    if (!isExpanded()) {
-                        toggle();
-                    }
-                } else {
-                    if (isExpanded()) {
-                        for (EditText editText : keyboards.keySet()) {
-                            if (editText.hasFocus()) {
-                                return;
-                            }
+                if (!isExpanded()) {
+                    expand();
+                }
+            } else {
+                if (isExpanded()) {
+                    for (EditText editText : keyboards.keySet()) {
+                        if (editText.hasFocus()) {
+                            return;
                         }
-                        toggle();
                     }
+                    collapse();
                 }
             }
         });
 
-        field.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!isExpanded()) {
-                    toggle();
-                }
+        field.setOnClickListener(v -> {
+            if (!isExpanded()) {
+                expand();
             }
         });
     }
