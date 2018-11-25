@@ -17,8 +17,8 @@ Custom and re-usable Android Keypad example.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rl_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -42,8 +42,6 @@ Custom and re-usable Android Keypad example.
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_margin="5dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -51,7 +49,7 @@ Custom and re-usable Android Keypad example.
                     style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Type Something with custom keypad"
+                    android:hint="@string/type_something_with_custom_keypad"
                     android:inputType="text"
                     android:textColor="@android:color/black" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -61,15 +59,13 @@ Custom and re-usable Android Keypad example.
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_margin="5dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/input_text_non_num"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Type Something with no numbers"
+                    android:hint="@string/type_something_with_no_numbers"
                     android:inputType="text"
                     android:textColor="@android:color/black" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -79,15 +75,13 @@ Custom and re-usable Android Keypad example.
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_margin="5dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/input_text_stockkeypad"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Type Something with android stock keypad"
+                    android:hint="@string/type_something_with_android_stock_keypad"
                     android:inputType="text"
                     android:textColor="@android:color/black" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -99,15 +93,15 @@ Custom and re-usable Android Keypad example.
     <com.rowland.kokokeyboard.keypad.KokoKeyboardView
         android:id="@+id/keyboardview"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@android:color/background_light"
-        android:elevation="1dp"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        app:ael_duration="300"
-        app:ael_expanded="false"
-        app:ael_orientation="vertical"
+        android:orientation="vertical"
+        app:el_expanded="true"
+        app:el_parallax="0.5"
+        app:elevation="1dp"
         tools:layout_height="250dp" />
 </RelativeLayout>
 ```
@@ -116,6 +110,7 @@ Custom and re-usable Android Keypad example.
 
 ```java
 public class KeyboardActivity extends AppCompatActivity {
+
     private KokoKeyboardView keyboard;
 
     @Override
@@ -123,12 +118,9 @@ public class KeyboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_keyboard);
 
-        EditText qwertyEditText = findViewById(R.id.input_text);
-        EditText qwertyNonNumEditText = findViewById(R.id.input_text_non_num);
-
         keyboard = findViewById(R.id.keyboardview);
-        keyboard.registerEditText(KokoKeyboardView.INPUT_TYPE_QWERTY, qwertyEditText);
-        keyboard.registerEditText(KokoKeyboardView.INPUT_TYPE_QWERTY_NUM , qwertyNonNumEditText);
+        keyboard.registerEditText(KokoKeyboardView.INPUT_TYPE_QWERTY_NUM, findViewById(R.id.input_text));
+        keyboard.registerEditText(KokoKeyboardView.INPUT_TYPE_QWERTY, findViewById(R.id.input_text_non_num));
     }
 
     @Override
@@ -138,6 +130,13 @@ public class KeyboardActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        keyboard.unregisterEditText(findViewById(R.id.input_text));
+        keyboard.unregisterEditText(findViewById(R.id.input_text_non_num));
     }
 }
 ```
