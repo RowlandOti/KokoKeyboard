@@ -82,14 +82,14 @@
     <com.rowland.kokokeyboard.keypad.KokoKeyboardView
         android:id="@+id/keyboardview"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@android:color/background_light"
         android:elevation="1dp"
         android:focusable="true"
         android:focusableInTouchMode="true"
         app:ael_duration="300"
-        app:ael_expanded="false"
+        app:ael_expanded="true"
         app:ael_orientation="vertical"
         tools:layout_height="250dp" />
 </RelativeLayout>

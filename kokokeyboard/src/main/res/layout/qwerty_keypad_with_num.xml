@@ -9,7 +9,8 @@
     <com.rowland.kokokeyboard.layouts.KeyBoardRowLayout
         android:id="@+id/keyboard_row_num"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <Space
             android:layout_width="0dp"
@@ -98,7 +99,8 @@
     <com.rowland.kokokeyboard.layouts.KeyBoardRowLayout
         android:id="@+id/keyboard_qwerty_one"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <com.rowland.kokokeyboard.keys.SquareKeyView
             android:id="@+id/key_q"
@@ -186,7 +188,8 @@
     <com.rowland.kokokeyboard.layouts.KeyBoardRowLayout
         android:id="@+id/keyboard_qwerty_two"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <Space
             android:layout_width="0dp"
@@ -267,7 +270,8 @@
     <com.rowland.kokokeyboard.layouts.KeyBoardRowLayout
         android:id="@+id/keyboard_qwerty_three"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <Space
             android:layout_width="0dp"
@@ -334,7 +338,8 @@
     <com.rowland.kokokeyboard.layouts.KeyBoardRowLayout
         android:id="@+id/keyboard_qwerty_four"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <Space
             android:layout_width="0dp"
