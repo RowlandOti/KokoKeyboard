@@ -1,5 +1,5 @@
 ### Status
-[![Build Status](https://travis-ci.com/RowlandOti/KokoKeyboard.svg?branch=master)](https://travis-ci.com/RowlandOti/KokoKeyboard)
+[![Build Status](https://travis-ci.com/RowlandOti/KokoKeyboard.svg?branch=master)](https://travis-ci.com/RowlandOti/KokoKeyboard)[ ![Download](https://api.bintray.com/packages/rowlandoti/maven/KokoKeyboard/images/download.svg) ](https://bintray.com/rowlandoti/maven/KokoKeyboard/_latestVersion)
 
 
 ## Koko Keyboard
@@ -10,6 +10,26 @@ Custom and re-usable Android Keypad example.
 
 ![Alt text](https://github.com/RowlandOti/KokoKeyboard/blob/master/documentation/qwertykeypad.png?raw=true "Qwerty Keypad Preview")![Alt text](https://github.com/RowlandOti/KokoKeyboard/blob/master/documentation/qwertykeypadnum.png?raw=true "Qwerty Keypad Preview")
 
+### Download
+Grab the latest version via Maven:
+```xml
+<dependency>
+  <groupId>com.rowland.keyboard</groupId>
+  <artifactId>KokoKeyboard</artifactId>
+  <version>0.0.1</version>
+  <type>pom</type>
+</dependency>
+```
+or Gradle:
+```groovy
+repositories {
+  jcenter()
+}
+
+dependencies {
+  implementation 'com.rowland.keyboard:KokoKeyboard:$latest_version'
+}
+```
 
 ### How to use
 
