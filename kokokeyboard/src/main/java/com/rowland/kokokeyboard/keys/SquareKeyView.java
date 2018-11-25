@@ -4,12 +4,11 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 
+import com.google.android.material.button.MaterialButton;
 import com.rowland.kokokeyboard.R;
 
-import androidx.appcompat.widget.AppCompatButton;
 
-
-public class SquareKeyView extends AppCompatButton {
+public class SquareKeyView extends MaterialButton {
 
     private float screenWidthPercentage = 0.20f;
     private float widthHeightRatio = 1.0f;

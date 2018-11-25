@@ -4,12 +4,11 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 
+import com.google.android.material.button.MaterialButton;
 import com.rowland.kokokeyboard.R;
 
-import androidx.appcompat.widget.AppCompatButton;
 
-
-public class RectangularKeyView extends AppCompatButton {
+public class RectangularKeyView extends MaterialButton {
 
     private boolean isSpecialKey = true;
     private int specialKeyCode = -1;
@@ -30,7 +29,6 @@ public class RectangularKeyView extends AppCompatButton {
             a.recycle();
         }
     }
-
 
     public boolean isSpecialKey() {
         return isSpecialKey;
