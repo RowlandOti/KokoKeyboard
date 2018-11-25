@@ -1,35 +1,11 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="materialButtonStyle">@style/Widget.Button</item>
-    </style>
-
-
-    <style name="Widget.Button" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="enforceTextAppearance">false</item>
-        <item name="android:textAppearance">@style/Widget.TextAppearance.Button</item>
-        <item name="android:paddingLeft">1dp</item>
-        <item name="android:paddingRight">1dp</item>
-        <item name="android:insetLeft">2dp</item>
-        <item name="android:insetRight">2dp</item>
-        <item name="cornerRadius">3dp</item>
-        <item name="strokeWidth">1dp</item>
-        <item name="strokeColor">@color/key_stroke_selector</item>
-    </style>
-
-    <style name="Widget.Button.Inverse" parent="Widget.Button">
-        <item name="android:textColor">?android:attr/colorAccent</item>
-        <item name="backgroundTint">@android:color/white</item>
-    </style>
-
-    <style name="Widget.TextAppearance.Button" parent="TextAppearance.MaterialComponents.Button">
-        <item name="android:textColor">@android:color/white</item>
-        <item name="fontFamily">sans-serif/</item>
+        <item name="materialButtonStyle">@style/Widget.Keys.Button.OutlinedButton</item>
     </style>
 
 </resources>
