@@ -16,7 +16,7 @@ Grab the latest version via Maven:
 <dependency>
   <groupId>com.rowland.keyboard</groupId>
   <artifactId>KokoKeyboard</artifactId>
-  <version>0.0.1</version>
+  <version>$latest_version</version>
   <type>pom</type>
 </dependency>
 ```
