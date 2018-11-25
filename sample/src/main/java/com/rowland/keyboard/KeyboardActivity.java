@@ -1,7 +1,6 @@
 package com.rowland.keyboard;
 
 import android.os.Bundle;
-import android.widget.EditText;
 
 import com.rowland.keyboard.sample.R;
 import com.rowland.kokokeyboard.keypad.KokoKeyboardView;
@@ -17,12 +16,9 @@ public class KeyboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_keyboard);
 
-        EditText qwertyEditText = findViewById(R.id.input_text);
-        EditText qwertyNonNumEditText = findViewById(R.id.input_text_non_num);
-
         keyboard = findViewById(R.id.keyboardview);
-        keyboard.registerEditText(KokoKeyboardView.INPUT_TYPE_QWERTY_NUM, qwertyEditText);
-        keyboard.registerEditText(KokoKeyboardView.INPUT_TYPE_QWERTY, qwertyNonNumEditText);
+        keyboard.registerEditText(KokoKeyboardView.INPUT_TYPE_QWERTY_NUM, findViewById(R.id.input_text));
+        keyboard.registerEditText(KokoKeyboardView.INPUT_TYPE_QWERTY, findViewById(R.id.input_text_non_num));
     }
 
     @Override
@@ -32,5 +28,12 @@ public class KeyboardActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        keyboard.unregisterEditText(findViewById(R.id.input_text));
+        keyboard.unregisterEditText(findViewById(R.id.input_text_non_num));
     }
 }

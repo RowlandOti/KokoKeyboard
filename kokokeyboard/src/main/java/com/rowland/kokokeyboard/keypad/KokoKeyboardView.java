@@ -62,20 +62,6 @@ public class KokoKeyboardView extends ExpandableLayout {
                 }
             }
         };
-
-        /*setListener(new ExpandableLayoutListenerAdapter() {
-            @Override
-            public void onOpened() {
-                super.onOpened();
-                // ToDo: Do something creative
-            }
-
-            @Override
-            public void onClosed() {
-                super.onClosed();
-                // ToDo: Do something creative
-            }
-        });*/
     }
 
     public void registerEditText(int type, final EditText field) {
