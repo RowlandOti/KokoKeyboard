@@ -12,15 +12,15 @@ import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
-import com.github.aakira.expandablelayout.ExpandableLayoutListenerAdapter;
-import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 import com.rowland.kokokeyboard.R;
 import com.rowland.kokokeyboard.layouts.KeyboardLayout;
 import com.rowland.kokokeyboard.manager.KeyboardManager;
 
+import net.cachapa.expandablelayout.ExpandableLayout;
+
 import java.util.HashMap;
 
-public class KokoKeyboardView extends ExpandableRelativeLayout {
+public class KokoKeyboardView extends ExpandableLayout {
 
     public static final int INPUT_TYPE_QWERTY_NUM = -10;
     public static final int INPUT_TYPE_QWERTY = -20;
@@ -39,10 +39,6 @@ public class KokoKeyboardView extends ExpandableRelativeLayout {
         init();
     }
 
-    public KokoKeyboardView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        init();
-    }
 
     protected void init() {
         keyboardListener = new KeyboardManager.KeyboardListener() {
@@ -67,7 +63,7 @@ public class KokoKeyboardView extends ExpandableRelativeLayout {
             }
         };
 
-        setListener(new ExpandableLayoutListenerAdapter() {
+        /*setListener(new ExpandableLayoutListenerAdapter() {
             @Override
             public void onOpened() {
                 super.onOpened();
@@ -79,7 +75,7 @@ public class KokoKeyboardView extends ExpandableRelativeLayout {
                 super.onClosed();
                 // ToDo: Do something creative
             }
-        });
+        });*/
     }
 
     public void registerEditText(int type, final EditText field) {
