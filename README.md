@@ -8,7 +8,7 @@ Custom and re-usable Android Keypad example.
 
 ### Preview:
 
-![Alt text](https://github.com/RowlandOti/KokoKeyboard/blob/master/documentation/qwertykeypad.png?raw=true "Qwerty Keypad Preview")![Alt text](https://github.com/RowlandOti/KokoKeyboard/blob/master/documentation/qwertykeypadnum.png?raw=true "Qwerty Keypad Preview")
+![Alt text](https://github.com/RowlandOti/KokoKeyboard/blob/master/documentation/qwertykeypadnum.png?raw=true "Qwerty Keypad Preview")![Alt text](https://github.com/RowlandOti/KokoKeyboard/blob/master/documentation/qwertykeypad.png?raw=true "Qwerty Keypad Preview")
 
 ### Download
 Grab the latest version via Maven:
