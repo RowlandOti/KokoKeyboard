@@ -41,17 +41,17 @@ public class KeyboardKeysBehaviourTest {
         onView(withId(R.id.input_text)).perform(typeText(mStringToBetyped), closeSoftKeyboard());
         onView(withId(R.id.input_text)).check(matches(withText(mStringToBetyped)));
 
-        onView(withId(R.id.key_backspace)).perform(click());
+        onView(withId(R.id.key_backspace)).perform(longClick());
         // Check that the text was changed.
         onView(withId(R.id.input_text)).check(matches(not(withText(mStringToBetyped))));
 
 
         onView(allOf(withId(R.id.key_backspace))).check(matches(isDisplayed())).perform(longClick());
         // Check that the text was deleted
-        onView(withId(R.id.input_text)).check(matches(not(withText(""))));
+        onView(withId(R.id.input_text)).check(matches(withText("")));
 
         onView(allOf(withId(R.id.key_space))).check(matches(isDisplayed())).perform(click());
         // Check that the text was deleted
-        onView(withId(R.id.input_text)).check(matches(not(withText(" "))));
+        onView(withId(R.id.input_text)).check(matches(withText(" ")));
     }
 }
