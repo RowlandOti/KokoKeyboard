@@ -23,9 +23,6 @@ jobs:
       - run:
           name: Run Tests
           command: ./gradlew lint test
-      - run:
-          name: Run Tests
-          command: ./gradlew test
       - store_artifacts:
           path: kokokeyboard/build/reports
           destination: reports
